@@ -29,8 +29,10 @@ function signup() {
         signupMessage.style.color = 'green';
   
         // Redirect to profile page
+        
         window.location.href = 'profile.html';
-        displayProfileDetails()
+        setTimeout(displayProfileDetails(),2000)
+        
       }
     } else {
       // Show error message for empty fields
@@ -66,7 +68,7 @@ function signup() {
     } else {
       // Redirect to profile page if authenticated
       window.location.href = 'profile.html';
-      displayProfileDetails()
+      setTimeout(displayProfileDetails(),2000)
     }
   }
   
@@ -76,11 +78,14 @@ function signup() {
   // Logout function
   function logout() {
     // Clear user state from local storage
-    localStorage.removeItem('user');
+    // localStorage.removeItem('user');
+    localStorage.clear();
   
     // Redirect to signup page
-    window.location.href = 'index.html';
+    // window.location.href = 'index.html';
+    redirectBasedOnAuthentication()
   }
+  
   
   function displayProfileDetails() {
      const profileData = document.getElementById('profile-details');
@@ -91,10 +96,7 @@ function signup() {
        <p>Password : ${user.password}</p>`
        
     } else {
-    //   profileMessage.textContent = 'Access token not found. Please signup.';
-    //   profileMessage.style.color = 'red';/
-    const signupMessage = document.getElementById('signup-message');
-      signupMessage.textContent = 'Please fill in all fields.';
-      signupMessage.style.color = 'red';
+     
+      redirectBasedOnAuthentication()
     }
   }
