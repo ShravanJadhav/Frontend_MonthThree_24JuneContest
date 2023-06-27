@@ -31,7 +31,7 @@ function signup() {
         // Redirect to profile page
         
         window.location.href = 'profile.html';
-        setTimeout(displayProfileDetails(),2000)
+        setTimeout(displayProfileDetails,2000)
         
       }
     } else {
@@ -68,7 +68,7 @@ function signup() {
     } else {
       // Redirect to profile page if authenticated
       window.location.href = 'profile.html';
-      setTimeout(displayProfileDetails(),2000)
+      setTimeout(displayProfileDetails,2000)
     }
   }
   
