@@ -68,7 +68,7 @@ function signup() {
     } else {
       // Redirect to profile page if authenticated
       window.location.href = 'profile.html';
-      setTimeout(displayProfileDetails,2000)
+      displayProfileDetails();
     }
   }
   
