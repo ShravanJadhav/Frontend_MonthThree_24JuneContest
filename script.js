@@ -71,9 +71,9 @@ function signup() {
     } else {
       // Redirect to profile page if authenticated
       window.location.href = 'profile.html';
-      
-    }
       displayProfileDetails();
+    }
+      
   }
   
   // Check authentication status on page load
@@ -86,8 +86,8 @@ function signup() {
    //localStorage.clear();
   
     // Redirect to signup page
-    // window.location.href = 'index.html';
-    redirectBasedOnAuthentication()
+     window.location.href = 'index.html';
+    //redirectBasedOnAuthentication()
   }
   
   
