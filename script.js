@@ -71,8 +71,9 @@ function signup() {
     } else {
       // Redirect to profile page if authenticated
       window.location.href = 'profile.html';
-      displayProfileDetails();
+      
     }
+      displayProfileDetails();
       
   }
   
