@@ -30,10 +30,13 @@ function signup() {
   
         // Redirect to profile page
         
-        window.location.href = 'profile.html';
-        setTimeout(displayProfileDetails,2000)
         
+        setTimeout(function(){
+            window.location.href = 'profile.html';
+        },2000);
       }
+        
+      
     } else {
       // Show error message for empty fields
       const signupMessage = document.getElementById('signup-message');
@@ -68,8 +71,9 @@ function signup() {
     } else {
       // Redirect to profile page if authenticated
       window.location.href = 'profile.html';
-      displayProfileDetails();
+      
     }
+      displayProfileDetails();
   }
   
   // Check authentication status on page load
@@ -78,8 +82,8 @@ function signup() {
   // Logout function
   function logout() {
     // Clear user state from local storage
-    // localStorage.removeItem('user');
-    localStorage.clear();
+     localStorage.removeItem('user');
+   //localStorage.clear();
   
     // Redirect to signup page
     // window.location.href = 'index.html';
