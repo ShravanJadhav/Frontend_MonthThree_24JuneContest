@@ -73,7 +73,7 @@ function signup() {
       window.location.href = 'profile.html';
       
     }
-      displayProfileDetails();
+      
       
   }
   
